@@ -33,9 +33,9 @@ $(function () {
     })
 
     $('#affixTarget')
-      .on('affix.bs.affix', function (e) {
+      .on('affix.bs.affix', function () {
         ok(true, 'affix event triggered')
-      }).on('affixed.bs.affix', function (e) {
+      }).on('affixed.bs.affix', function () {
         ok(true,'affixed event triggered')
         $('#affixTarget').remove()
         $('#affixAfter').remove()
