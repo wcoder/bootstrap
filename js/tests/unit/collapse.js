@@ -1,4 +1,5 @@
 $(function () {
+  'use strict';
 
   module('collapse')
 
@@ -13,7 +14,7 @@ $(function () {
   })
 
   test('should return element', function () {
-    ok($(document.body).collapse()[0] == document.body, 'document.body returned')
+    ok($(document.body).collapse()[0] === document.body, 'document.body returned')
   })
 
   test('should show a collapsed element', function () {
@@ -48,10 +49,10 @@ $(function () {
     stop()
     $('<div class="collapse" style="height: 0px"/>')
       .on('show.bs.collapse', function () {
-        ok(this.style.height == '0px')
+        ok(this.style.height === '0px')
       })
       .on('shown.bs.collapse', function () {
-        ok(this.style.height == 'auto')
+        ok(this.style.height === 'auto')
         start()
       })
       .collapse('show')

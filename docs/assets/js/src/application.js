@@ -10,7 +10,8 @@
  */
 
 
-!function ($) {
+!(function ($) {
+  'use strict';
 
   $(function () {
 
@@ -31,11 +32,8 @@
     var $window = $(window)
     var $body   = $(document.body)
 
-    var navHeight = $('.navbar').outerHeight(true) + 10
-
     $body.scrollspy({
-      target: '.bs-docs-sidebar',
-      // offset: navHeight
+      target: '.bs-docs-sidebar'
     })
 
     $window.on('load', function () {
@@ -103,4 +101,4 @@
       })
   })
 
-}(jQuery)
+})(jQuery)
