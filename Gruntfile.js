@@ -5,6 +5,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+/* jshint node:true */
+
 module.exports = function (grunt) {
   'use strict';
 
@@ -53,6 +55,9 @@ module.exports = function (grunt) {
         src: 'js/*.js'
       },
       test: {
+        options: {
+          jshintrc: 'js/tests/unit/.jshintrc'
+        },
         src: 'js/tests/unit/*.js'
       },
       assets: {
